@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- navbar -->
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo-rmb.png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item ms-3">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item ms-3">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item ms-3">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item ms-3">
+            <a class="nav-link" href="#contact">Contact Us</a>
+          </li>
+        </ul>
+        <a href="#">
+          <button type="button" class="btn log-in">Log in</button>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- landing -->
+
+  <section class="landing d-flex justify-content-center align-items-center flex-column" id="home">
+    <div class="container d-flex justify-content-center align-items-center flex-column">
+      <h3><span class="logo-red">Web</span> <span class="logo-orange">Develop</span><span
+          class="digitals-size">.digitals</span></h3>
+      <p class="text-black-50 mt-3 text-center">We build awesome websites using html, css and js</p>
+      <a href="#projects">
+        <button type="button" class="btn go-to-projects mt-3">show our projects</button>
+      </a>
+    </div>
+  </section>
+
+  <!-- services -->
+
+  <section class="services d-flex justify-content-center align-items-center" id="services">
+    <div class="container">
+      <div class="main-heading">
+        <h3>Services</h3>
+      </div>
+      <div class="row">
+        <div class="srv-card srv-card-1 me-auto card col-lg-3 col-md-5">
+          <i class="fas fa-desktop fa-3x mt-4 mb-3"></i>
+          <div class="text">
+            <h3>Creating responsive websites</h3>
+            <p>We create responsive websites using Html,Css and javaScript in an effectve way that makes the code
+              run
+              fast and with no wrongs.</p>
+          </div>
+        </div>
+        <div class="srv-card ms-md-auto mt-5 mt-md-0 ms-lg-0 card col-lg-3 col-md-5">
+          <i class="fas fa-cog fa-3x mt-4 mb-3"></i>
+          <div class="text">
+            <h3>Editing and dealing with websites</h3>
+            <p>We edit your code and improve it using the latest and the fastest codes even if we didn't creat it.
+            </p>
+          </div>
+        </div>
+        <div class="srv-card srv-card-last ms-lg-auto mt-5 mt-lg-0 card col-lg-3 col-md-5">
+          <i class="fas fa-camera fa-3x mt-4 mb-3"></i>
+          <div class="text">
+            <h3>Previewing your website</h3>
+            <p>We prewiew and evaluate your code giving you tips in how to improve it and this moves your level to a
+              higher level.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="projects" id="projects">
+    <div class="main-heading">
+      <h3>Projects</h3>
+    </div>
+    <div class="container d-flex align-items-center justify-content-center">
+      <div class="pro-card card ms-auto me-auto">
+        <img src="images/web-photo.png" class="mt-3 ps-3 pe-3" alt="">
+        <h1 class="text-center mt-3">Honey Market🍯</h1>
+        <p class="mt-2 text-center">Made up using Html,Css and javaScript</p>
+      </div>
+    </div>
+  </section>
+  <section class="Contact" id="contact">
+    <div class="main-heading">
+      <h3>Contact us</h3>
+    </div>
+    <div class="container">
+      <div class="left-half d-flex flex-column justify-content-evenly align-items-start">
+        <div class="my-contact-info ms-0 ms-lg-5 d-flex align-items-center">
+          <i class="fa-solid fa-envelope fs-4"></i>
+          <p class="mb-0 ms-2 fs-4">wd.digitals1@gmail.com</p>
+        </div>
+        <img src="images/contact.png" alt="">
+      </div>
+      <div class="right-half">
+        <form class="d-flex flex-column justify-content-center">
+          <input type="text" name="name" placeholder="Your name">
+          <input type="email" name="mail" placeholder="Your mail">
+          <textarea name="message" placeholder="Your message"></textarea>
+          <button class="btn form-button">
+            <i class="fa-regular fa-paper-plane"></i> Send
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <h4>© 2025 WD.digitals</h4>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/all.min.js"></script>
+</body>
+
+</html>
