@@ -171,7 +171,7 @@ body{
 }
 
 .projects .container .pro-card{
-  background-color: var(--gray-color);
+  background-color: var(--blue-color);
   animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
@@ -182,11 +182,11 @@ body{
 }
 
 .pro-card h1{
-  color: var(--blue-color);
+  color: var(--orange-color);
 }
 
 .pro-card p{
-  color: var(--orange-color);
+  color: white;
 }
 
 /* contact us */
