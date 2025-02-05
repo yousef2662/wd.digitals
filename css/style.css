@@ -136,8 +136,13 @@ body{
   animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
+  transition: .3s;
 }
 
+.services .srv-card:hover{
+  scale: 1.05;
+  background-color: rgb(245, 245, 245);
+}
 
 @media (max-width: 767px) {
   .services .container .srv-card.srv-card-1{
@@ -175,6 +180,12 @@ body{
   animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
+  transition: .3s;
+}
+
+.projects .pro-card:hover{
+  scale: 1.05;
+  background-color: #115bc9;
 }
 
 .pro-card img{
@@ -187,6 +198,10 @@ body{
 
 .pro-card p{
   color: white;
+}
+
+.projects .honey-project{
+  text-decoration: none;
 }
 
 /* contact us */
