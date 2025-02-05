@@ -334,6 +334,16 @@ footer h4{
   margin-bottom: 0;
 }
 
+.Contact .social-media svg{
+  color: var(--blue-color);
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.Contact .social-media svg:hover{
+  scale: 1.25;
+}
 
 
 
