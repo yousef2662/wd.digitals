@@ -1,0 +1,117 @@
+
+:root{
+  --blue-color: #146EF5;
+  --gray-color: #F0F0F0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to right , rgb(203, 194, 194) , rgb(173, 173, 248));
+}
+
+.container {
+  background-color: white;
+  position: relative;
+  height: 350px;
+  width: 400px;
+  border-radius: 30px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 15%);
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .container{
+    width: 330px;
+    overflow: unset;
+  }
+}
+
+.container p {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  margin: 20px 0;
+}
+
+.container span {
+  font-size: 12px;
+}
+
+.container a {
+  color: var(--gray-color);
+}
+
+.with-toggle-menu-left {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.with-toggle-menu-left h1 {
+  margin-bottom: 25px;
+}
+
+.with-toggle-menu-left span {
+  font-size: 15px;
+}
+
+.with-toggle-menu-left .send-code{
+  color: #60a0ff;
+}
+
+.with-toggle-menu-left .icons-with-left {
+  margin-bottom: 15px;
+}
+
+.with-toggle-menu-left .icons-with-left a {
+  margin: 0 7px;
+  color: var(--blue-color);
+  background-color: var(--gray-color);
+  padding: 5px 7px;
+  border-radius: 10px;
+}
+
+.with-toggle-menu-left .icons-with-left .facebook {
+  padding: 5px 3px;
+}
+
+.with-toggle-menu-left input {
+  margin: 10px 0px 10px;
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border-color: var(--blue-color);
+}
+
+.with-toggle-menu-left button {
+  margin-top: 20px;
+  background-color: var(--blue-color);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.with-toggle-menu-left button:hover {
+  background-color: white;
+  color: var(--blue-color);
+  border-color: var(--blue-color);
+}
