@@ -139,7 +139,8 @@ body{
   transition: .3s;
 }
 
-.services .srv-card:hover{
+.services .srv-card:hover,
+.services .srv-card:focus{
   scale: 1.05;
   background-color: rgb(245, 245, 245);
 }
@@ -189,7 +190,8 @@ body{
   }
 }
 
-.projects .pro-card:hover{
+.projects .pro-card:hover,
+.projects .pro-card:focus{
   background-color: #115bc9;
 }
 
@@ -333,7 +335,8 @@ body{
   align-self: center;
 }
 
-.right-half form button:hover{
+.right-half form button:hover,
+.right-half form button:focus{
   background-color: white;
   color: var(--blue-color);
   border: 2px solid var(--blue-color);
@@ -361,7 +364,8 @@ footer h4{
   transition: .3s;
 }
 
-.Contact .social-media svg:hover{
+.Contact .social-media svg:hover,
+.Contact .social-media svg:focus{
   scale: 1.25;
 }
 

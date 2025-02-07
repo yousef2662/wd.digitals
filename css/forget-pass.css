@@ -110,7 +110,8 @@ body {
   cursor: pointer;
 }
 
-.with-toggle-menu-left button:hover {
+.with-toggle-menu-left button:hover,
+.with-toggle-menu-left button:focus {
   background-color: white;
   color: var(--blue-color);
   border-color: var(--blue-color);

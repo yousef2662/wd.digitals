@@ -94,7 +94,8 @@ body {
   transition: 0.3s;
 }
 
-.toggle-menu-right button:hover {
+.toggle-menu-right button:hover,
+.toggle-menu-right button:focus {
   color: black;
 }
 /* left */
@@ -140,7 +141,8 @@ body {
   transition: .3s;
 }
 
-.toggle-menu-left button:hover {
+.toggle-menu-left button:hover,
+.toggle-menu-left button:focus {
   color: black;
 }
 /* end toggle menu */
@@ -209,7 +211,8 @@ body {
   cursor: pointer;
 }
 
-.with-toggle-menu-right button:hover {
+.with-toggle-menu-right button:hover,
+.with-toggle-menu-right button:focus {
   background-color: white;
   color: var(--blue-color);
   border-color: var(--blue-color);
@@ -277,7 +280,8 @@ body {
   cursor: pointer;
 }
 
-.with-toggle-menu-left button:hover {
+.with-toggle-menu-left button:hover,
+.with-toggle-menu-left button:focus {
   background-color: white;
   color: var(--blue-color);
   border-color: var(--blue-color);
