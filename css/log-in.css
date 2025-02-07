@@ -49,10 +49,6 @@ body {
   color: var(--gray-color);
 }
 
-.inactive {
-  visibility: hidden;
-}
-
 /* start toggle menu */
 
 /* right */
@@ -141,7 +137,7 @@ body {
   border-color: var(--blue-color);
   color: var(--blue-color);
   cursor: pointer;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 .toggle-menu-left button:hover {
@@ -292,3 +288,7 @@ body {
   text-decoration: none;
 }
 /* end with tuggle */
+
+.inactive {
+display: none;
+}
