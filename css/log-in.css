@@ -1,6 +1,12 @@
 :root{
+  --dark-color: #2B2B2B;
+  --dark-color-links: #151515;
   --blue-color: #146EF5;
   --gray-color: #F0F0F0;
+  --red-color: #DF0000;
+  --orange-color: #FFBE00;
+  --dark-mode-back-color: #212529;
+  --input-back-on-dark: #dfdfdf;
 }
 
 * {
@@ -293,6 +299,74 @@ body {
 }
 /* end with tuggle */
 
+/* dark mode and inactive */
+
+body.dark-mode{
+  background-image: linear-gradient(to right , rgb(81, 81, 81) , rgb(58, 58, 83));
+}
+
+.container.dark-mode{
+  background-color: var(--dark-mode-back-color);
+}
+
+.container.dark-mode .with-toggle-menu-left h1{
+  color: white;
+}
+
+.container.dark-mode .with-toggle-menu-left span{
+  color: white;
+}
+
+.container.dark-mode .with-toggle-menu-left .forget{
+  color: #0655cb;
+}
+
+.container.dark-mode .with-toggle-menu-left input{
+  background-color: var(--input-back-on-dark);
+}
+
+.container.dark-mode .with-toggle-menu-left button:hover,
+.container.dark-mode .with-toggle-menu-left button:focus {
+  background-color: var(--dark-mode-back-color);
+}
+
+.container.dark-mode .toggle-menu-left button{
+  background-color: var(--dark-mode-back-color);
+}
+
+.container.dark-mode .toggle-menu-left button:hover,
+.container.dark-mode .toggle-menu-left button:focus{
+  color: white;
+}
+
+/* the opposite view */
+
+.container.dark-mode .with-toggle-menu-right h1{
+  color: white;
+}
+
+.container.dark-mode .with-toggle-menu-right span{
+  color: white;
+}
+
+.container.dark-mode .with-toggle-menu-right input{
+  background-color: var(--input-back-on-dark);
+}
+
+.container.dark-mode .with-toggle-menu-right button:hover,
+.container.dark-mode .with-toggle-menu-right button:focus {
+  background-color: var(--dark-mode-back-color);
+}
+
+.container.dark-mode .toggle-menu-right button{
+  background-color: var(--dark-mode-back-color);
+}
+
+.container.dark-mode .toggle-menu-right button:hover,
+.container.dark-mode .toggle-menu-right button:focus{
+  color: white;
+}
+
 .inactive {
-display: none;
+  display: none;
 }

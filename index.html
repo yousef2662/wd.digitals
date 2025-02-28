@@ -18,11 +18,15 @@
 <body>
   <!-- navbar -->
 
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg ">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="images/logo-rmb.png" alt="">
       </a>
+      <div class="sun-container">
+        <div class="sun" onclick="changeToMoon()"></div>
+        <div class="sun-aft inactive" onclick="changeToSun()"></div>
+      </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -51,11 +55,11 @@
 
   <!-- landing -->
 
-  <section class="landing d-flex justify-content-center align-items-center flex-column" id="home">
+  <section class="landing d-flex justify-content-center align-items-center flex-column " id="home">
     <div class="container d-flex justify-content-center align-items-center flex-column">
       <h3><span class="logo-red">Web</span> <span class="logo-orange">Develop</span><span
           class="digitals-size">.digitals</span></h3>
-      <p class="text-black-50 mt-3 text-center">We build awesome websites using html, css and js</p>
+      <p class="text-on-landing text-black-50 mt-3 text-center">We build awesome websites using html, css and js</p>
       <a href="#projects">
         <button type="button" class="btn go-to-projects mt-3">show our projects</button>
       </a>
@@ -98,7 +102,7 @@
       </div>
     </div>
   </section>
-  <section class="projects" id="projects">
+  <section class="projects " id="projects">
     <div class="main-heading">
       <h3>Projects</h3>
     </div>
@@ -112,7 +116,7 @@
       </a>
     </div>
   </section>
-  <section class="Contact" id="contact">
+  <section class="Contact " id="contact">
     <div class="main-heading">
       <h3>Contact us</h3>
     </div>
@@ -122,7 +126,7 @@
           <i class="fa-solid fa-envelope fs-4"></i>
           <p class="mb-0 ms-2 fs-4">wd.digitals1@gmail.com</p>
         </div>
-        <img src="images/contact.png" alt="">
+        <img src="images/contact.png" class="inactiv" alt="">
       </div>
       <div class="right-half">
         <form class="d-flex flex-column justify-content-center">
@@ -141,7 +145,7 @@
       <a href="https://x.com/WD_digitals"><i class="fa-brands fa-x-twitter ms-3"></i></a>
     </div>
   </section>
-  <footer>
+  <footer class="footer1 ">
     <h4>© 2025 WD.digitals</h4>
   </footer>
 
