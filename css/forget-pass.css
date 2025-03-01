@@ -1,7 +1,12 @@
-
 :root{
+  --dark-color: #2B2B2B;
+  --dark-color-links: #151515;
   --blue-color: #146EF5;
   --gray-color: #F0F0F0;
+  --red-color: #DF0000;
+  --orange-color: #FFBE00;
+  --dark-mode-back-color: #212529;
+  --input-back-on-dark: #dfdfdf;
 }
 
 * {
@@ -115,4 +120,29 @@ body {
   background-color: white;
   color: var(--blue-color);
   border-color: var(--blue-color);
+}
+
+body.dark-mode{
+  background-image: linear-gradient(to right , rgb(81, 81, 81) , rgb(58, 58, 83));
+}
+
+.container.dark-mode {
+  background-color: var(--dark-mode-back-color);
+}
+
+.container.dark-mode h1{
+  color: white;
+}
+
+.container.dark-mode .use-email{
+  color: white;
+}
+
+.container.dark-mode input{
+  background-color: var(--input-back-on-dark);
+}
+
+.container.dark-mode button:hover,
+.container.dark-mode button:focus{
+  background-color: var(--dark-mode-back-color);
 }
