@@ -464,6 +464,12 @@ body.dark-mode  .navbar-toggler {
   margin-left: 30px;
 }
 
+@media (max-width: 767px) {
+  .sun-container{
+    margin-left: 0px;
+  }
+}
+
 .sun {
   position: absolute;
   width: 25px;
