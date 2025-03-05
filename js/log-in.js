@@ -61,3 +61,48 @@ document.addEventListener("DOMContentLoaded", () => {
     window.changeToSun();
   }
 });
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector("#sign-up-p button").addEventListener("click", async (e) => {
+    e.preventDefault();
+    const name = document.querySelector("#sign-up-p input[type='text']").value;
+    const email = document.querySelector("#sign-up-p input[type='email']").value;
+    const password = document.querySelector("#sign-up-p input[type='password']").value;
+
+    const response = await fetch("http://localhost:3000/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, password })
+    });
+
+    const data = await response.json();
+    if (response.ok) {
+      alert("Account created successfully!");
+    } else {
+      alert("Error: " + data.error);
+    }
+  });
+
+  document.querySelector("#sign-in-p button").addEventListener("click", async (e) => {
+    e.preventDefault();
+    const email = document.querySelector("#sign-in-p input[type='email']").value;
+    const password = document.querySelector("#sign-in-p input[type='password']").value;
+
+    const response = await fetch("http://localhost:3000/signin", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password })
+    });
+
+    const data = await response.json();
+    if (response.ok) {
+      alert("Logged in successfully!");
+    } else {
+      alert("Error: " + data.error);
+    }
+  });
+});
