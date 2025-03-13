@@ -535,12 +535,12 @@ body.dark-mode  .navbar-toggler {
 
 @media (max-width: 767px) {
   .go-up{
-    right: 15px;
-    width: 35px;
-    height: 35px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
   }  
 
   .go-up svg {
-    font-size: 18px;
+    font-size: 27px;
   }
 }
