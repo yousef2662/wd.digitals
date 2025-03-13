@@ -66,6 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+const API_URL = "https://your-project-name.up.railway.app"; // ضع رابط Railway هنا
+
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#sign-up-p button").addEventListener("click", async (e) => {
     e.preventDefault();
@@ -73,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const email = document.querySelector("#sign-up-p input[type='email']").value;
     const password = document.querySelector("#sign-up-p input[type='password']").value;
 
-    const response = await fetch("http://localhost:3000/signup", {
+    const response = await fetch(`${API_URL}/signup`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, password })
@@ -92,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const email = document.querySelector("#sign-in-p input[type='email']").value;
     const password = document.querySelector("#sign-in-p input[type='password']").value;
 
-    const response = await fetch("http://localhost:3000/signin", {
+    const response = await fetch(`${API_URL}/signin`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password })
@@ -106,3 +108,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
