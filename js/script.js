@@ -71,3 +71,36 @@ window.addEventListener("scroll", () => {
     goUp.classList.remove("active");
   }
 })
+
+
+// cddcd
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const formData = {
+      name: form.name.value,
+      mail: form.mail.value,
+      message: form.message.value
+    };
+
+    try {
+      const response = await fetch("https://wddigitals-production.up.railway.app/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await response.json();
+      alert(result.message || "An error occurred.");
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Failed to send message.");
+    }
+  });
+});

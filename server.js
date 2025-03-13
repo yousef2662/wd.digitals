@@ -44,3 +44,20 @@ app.post('/signin', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on ${process.env.RAILWAY_STATIC_URL || `http://localhost:${port}`}`);
 });
+
+// Contact form submission
+app.post('/contact', async (req, res) => {
+  const { name, mail, message } = req.body;
+
+  if (!name || !mail || !message) {
+    return res.status(400).json({ error: 'All fields are required.' });
+  }
+
+  const { data, error } = await supabase
+    .from('contacts')
+    .insert([{ name, mail, message }]);
+
+  if (error) return res.status(500).json({ error: error.message });
+
+  res.json({ message: 'Form submitted successfully!', data });
+});
