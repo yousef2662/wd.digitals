@@ -18,6 +18,7 @@ window.changeToMoon = function () {
   let footer = document.querySelector(".footer1");
   let contact = document.querySelector(".Contact");
   let textOnLanding = document.querySelector(".text-on-landing");
+  let goUp = document.querySelector(".go-up");
 
   if (sun) sun.classList.add("inactive");
   if (moon) moon.classList.remove("inactive");
@@ -28,6 +29,7 @@ window.changeToMoon = function () {
   if (footer) footer.classList.add("dark-mode");
   if (contact) contact.classList.add("dark-mode");
   if (textOnLanding) textOnLanding.classList.remove("text-black-50");
+  if (goUp) goUp.classList.add("dark-mode");
 
   localStorage.setItem("theme", "dark");
 };
@@ -43,6 +45,7 @@ window.changeToSun = function () {
   let footer = document.querySelector(".footer1");
   let contact = document.querySelector(".Contact");
   let textOnLanding = document.querySelector(".text-on-landing");
+  let goUp = document.querySelector(".go-up");
 
   if (sun) sun.classList.remove("inactive");
   if (moon) moon.classList.add("inactive");
@@ -53,6 +56,18 @@ window.changeToSun = function () {
   if (footer) footer.classList.remove("dark-mode");
   if (contact) contact.classList.remove("dark-mode");
   if (textOnLanding) textOnLanding.classList.add("text-black-50");
+  if (goUp) goUp.classList.remove("dark-mode");
 
   localStorage.setItem("theme", "light");
 };
+
+
+let goUp = document.querySelector(".go-up");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    goUp.classList.add("active");
+  } else {
+    goUp.classList.remove("active");
+  }
+})

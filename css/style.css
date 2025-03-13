@@ -498,3 +498,49 @@ body.dark-mode  .navbar-toggler {
 .inactive{
   transform: scale(0);
 }
+
+
+.go-up{
+  position: fixed;
+  background-color: var(--dark-color-links);
+  bottom: 30px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: .3s;
+}
+
+.go-up.active{
+  opacity: .8;
+  bottom: 35px;
+}
+
+.go-up svg {
+  color: var(--gray-color);
+  font-size: 22px;
+}
+
+.go-up.dark-mode {
+  background-color: var(--gray-color);
+}
+
+.go-up.dark-mode.active svg{
+  color: var(--dark-color-links);
+}
+
+@media (max-width: 767px) {
+  .go-up{
+    right: 15px;
+    width: 35px;
+    height: 35px;
+  }  
+
+  .go-up svg {
+    font-size: 18px;
+  }
+}
