@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-const API_URL = "https://your-project-name.up.railway.app"; // ضع رابط Railway هنا
+const API_URL = "https://wddigitals-production.up.railway.app"; // ضع رابط Railway هنا
 
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#sign-up-p button").addEventListener("click", async (e) => {
