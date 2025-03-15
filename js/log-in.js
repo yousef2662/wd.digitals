@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-const API_URL = "https://wddigitals-production.up.railway.app"; // ضع رابط Railway هنا
+const API_URL = "https://wddigitals-production.up.railway.app";
 
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#sign-up-p button").addEventListener("click", async (e) => {
@@ -72,6 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const data = await response.json();
     if (response.ok) {
       alert("Account created successfully!");
+      localStorage.setItem("user", JSON.stringify(data.data.user));
       window.location.href = "index.html"; // إعادة التوجيه إلى الصفحة الرئيسية
     } else {
       alert("Error: " + data.error);
@@ -92,6 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const data = await response.json();
     if (response.ok) {
       alert("Logged in successfully!");
+      localStorage.setItem("user", JSON.stringify(data.data.user));
       window.location.href = "index.html"; // إعادة التوجيه إلى الصفحة الرئيسية
     } else {
       alert("Error: " + data.error);

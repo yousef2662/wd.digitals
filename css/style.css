@@ -7,6 +7,10 @@
   --orange-color: #FFBE00;
   --dark-mode-back-color: #212529;
   --input-back-on-dark: #dfdfdf;
+  --sun-color: #FDE047;
+  --moon-color: #334155;
+  --inactive-color-forMoon: #FEF9C3;
+  --inactive-color-forSun: #94A3B8;
 }
 
 /* general */
@@ -454,8 +458,8 @@ body.dark-mode  .navbar-toggler {
 
 /* changer to dark mode */
 
-.sun-container{
-  border: 2px solid red;
+.change-mode{
+  background-color: var(--sun-color);
   width: 85px;
   height: 35px;
   border-radius: 50px;
@@ -464,40 +468,64 @@ body.dark-mode  .navbar-toggler {
   margin-left: 30px;
 }
 
+.change-mode-to-d-back {
+  background-color: var(--moon-color);
+}
+
+.change-mode-to-l-back {
+  background-color: var(--sun-color);
+}
+
 @media (max-width: 767px) {
-  .sun-container{
+  .change-mode{
     margin-left: 0px;
   }
 }
 
-.sun {
+.sun-mode {
   position: absolute;
-  width: 25px;
-  height: 25px;
-  background-color: rgb(255, 238, 0);
+  width: 21px;
+  height: 21px;
+  color: var(--sun-color);
+  padding: 4.5px 4.5px;
   border-radius: 50%;
   top: 2.7px;
   left: 5px;
-  transition: all 0.5s ease-in-out;
+  background-color: white;
+  transition-property: color, background-color, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: .5s;
   transform: scale(1);
 }
 
-.sun-aft {
+.moon-mode {
   position: absolute;
-  width: 25px;
-  height: 25px;
-  background-color: rgb(230, 229, 219);
+  width: 23px;
+  height: 23px;
+  padding: 3.5px 3.5px;
+  color: var(--moon-color);
   border-radius: 50%;
   top: 2.7px;
   right: 5px;
-  transform: translate(5%, -50%);
-  transition: all 0.5s ease-in-out;
-  transform: scale(1);
+  background-color: white;
+  transition-property: color, background-color, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: .5s;
+  transform: translate(5%, -50%), scale(1);
 }
 
-.inactive{
-  transform: scale(0);
+.inactiveS{
+  transform: scale(.84);
+  background-color: transparent;
+  color: var(--inactive-color-forSun);
 }
+
+.inactiveM{
+  transform: scale(.83);
+  background-color: transparent;
+  color: var(--inactive-color-forMoon);
+}
+
 
 
 .go-up{
@@ -543,4 +571,11 @@ body.dark-mode  .navbar-toggler {
   .go-up svg {
     font-size: 21px;
   }
+}
+
+.navbar .user {
+  margin-left: 16px;
+  font-size: 35px;
+  cursor: pointer;
+  display: none;
 }

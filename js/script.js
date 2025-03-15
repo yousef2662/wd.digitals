@@ -1,4 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const logInButton = document.getElementById("login-btn");
+  const userIcon = document.getElementById("user-icon");
+
+  // التحقق مما إذا كان المستخدم مسجّل دخول
+  const userData = localStorage.getItem("user");
+
+  if (userData) {
+    const user = JSON.parse(userData);
+
+    // إخفاء زر تسجيل الدخول
+    logInButton.style.display = "none";
+
+    // إظهار أيقونة المستخدم مع اسمه
+    userIcon.style.display = "inline-block";
+    userIcon.setAttribute("title", user.name);
+  }
+
   let theme = localStorage.getItem("theme");
   if (theme === "dark") {
     window.changeToMoon();
@@ -9,8 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 window.changeToMoon = function () {
   document.body.classList.add("dark-mode");
-  let sun = document.querySelector(".sun");
-  let moon = document.querySelector(".sun-aft");
+  let sun = document.querySelector(".sun-mode");
+  let moon = document.querySelector(".moon-mode");
+  let changeMode = document.querySelector(".change-mode");
   let navbar = document.querySelector(".navbar");
   let landing = document.querySelector(".landing");
   let services = document.querySelector(".services");
@@ -20,8 +38,11 @@ window.changeToMoon = function () {
   let textOnLanding = document.querySelector(".text-on-landing");
   let goUp = document.querySelector(".go-up");
 
-  if (sun) sun.classList.add("inactive");
-  if (moon) moon.classList.remove("inactive");
+  if (sun) sun.classList.add("inactiveS");
+  if (moon) moon.classList.remove("inactiveM");
+  if (changeMode) changeMode.classList.add("change-mode-to-d-back");
+  if (changeMode) changeMode.classList.remove("change-mode-to-l-back");
+
   if (navbar) navbar.classList.add("dark-mode");
   if (landing) landing.classList.add("dark-mode");
   if (services) services.classList.add("dark-mode");
@@ -36,8 +57,9 @@ window.changeToMoon = function () {
 
 window.changeToSun = function () {
   document.body.classList.remove("dark-mode");
-  let sun = document.querySelector(".sun");
-  let moon = document.querySelector(".sun-aft");
+  let sun = document.querySelector(".sun-mode");
+  let moon = document.querySelector(".moon-mode");
+  let changeMode = document.querySelector(".change-mode");
   let navbar = document.querySelector(".navbar");
   let landing = document.querySelector(".landing");
   let services = document.querySelector(".services");
@@ -47,8 +69,11 @@ window.changeToSun = function () {
   let textOnLanding = document.querySelector(".text-on-landing");
   let goUp = document.querySelector(".go-up");
 
-  if (sun) sun.classList.remove("inactive");
-  if (moon) moon.classList.add("inactive");
+  if (sun) sun.classList.remove("inactiveS");
+  if (moon) moon.classList.add("inactiveM");
+  if (changeMode) changeMode.classList.add("change-mode-to-l-back");
+  if (changeMode) changeMode.classList.remove("change-mode-to-d-back");
+
   if (navbar) navbar.classList.remove("dark-mode");
   if (landing) landing.classList.remove("dark-mode");
   if (services) services.classList.remove("dark-mode");

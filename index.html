@@ -23,9 +23,9 @@
       <a class="navbar-brand" href="#">
         <img src="images/logo-rmb.png" alt="">
       </a>
-      <div class="sun-container">
-        <div class="sun" onclick="changeToMoon()"></div>
-        <div class="sun-aft inactive" onclick="changeToSun()"></div>
+      <div class="change-mode">
+        <i class="fa-solid fa-sun sun-mode" onclick="changeToMoon()"></i>
+        <i class="fa-solid fa-moon moon-mode inactiveM" onclick="changeToSun()"></i>
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,12 +46,16 @@
             <a class="nav-link" href="#contact">Contact Us</a>
           </li>
         </ul>
-        <a href="log-in.html">
+        <a href="log-in.html" id="login-btn">
           <button type="button" class="btn log-in">Log in</button>
+        </a>
+        <a href="#" id="user-icon">
+          <i class="fa-solid fa-circle-user user"></i>
         </a>
       </div>
     </div>
   </nav>
+
 
   <!-- landing -->
 
