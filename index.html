@@ -20,6 +20,11 @@
 
   <nav class="navbar navbar-expand-lg " id="home">
     <div class="container">
+      <div class="user-details inact">
+        <a href="#">
+          <button id="logout-btn" class="logout-btn inact" style="display: none;">Log Out</button>
+        </a>
+      </div>
       <a class="navbar-brand" href="#">
         <img src="images/logo-rmb.png" alt="">
       </a>
@@ -49,8 +54,8 @@
         <a href="log-in.html" id="login-btn">
           <button type="button" class="btn log-in">Log in</button>
         </a>
-        <a href="#" id="user-icon">
-          <i class="fa-solid fa-circle-user user"></i>
+        <a href="#" id="user-icon" onclick="userFun();">
+          <i class="fa-solid fa-circle-user"></i>
         </a>
       </div>
     </div>
@@ -120,7 +125,7 @@
       </a>
     </div>
   </section>
-  <section class="Contact " id="contact">
+  <section class="Contact" id="contact">
     <div class="main-heading">
       <h3>Contact us</h3>
     </div>
@@ -133,11 +138,11 @@
         <img src="images/contact.png" class="inactiv" alt="">
       </div>
       <div class="right-half">
-        <form class="d-flex flex-column justify-content-center">
-          <input type="text" name="name" placeholder="Your name">
-          <input type="email" name="mail" placeholder="Your mail">
-          <textarea name="message" placeholder="Your message"></textarea>
-          <button class="btn form-button">
+        <form id="contact-form" class="d-flex flex-column justify-content-center">
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+          <input type="email" id="email" name="mail" placeholder="Your email" required>
+          <textarea id="message" name="message" placeholder="Your message" required></textarea>
+          <button type="submit" class="btn form-button">
             <i class="fa-regular fa-paper-plane"></i> Send
           </button>
         </form>
@@ -149,6 +154,7 @@
       <a href="https://x.com/WD_digitals"><i class="fa-brands fa-x-twitter ms-3"></i></a>
     </div>
   </section>
+
   <footer class="footer1 ">
     <h4>© 2025 WD.digitals</h4>
   </footer>

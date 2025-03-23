@@ -1,19 +1,36 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const logInButton = document.getElementById("login-btn");
-  const userIcon = document.getElementById("user-icon");
+  const logInButton = document.querySelector("#login-btn");
+  const userIcon = document.querySelector("#user-icon");
+  const logoutButton = document.querySelector("#logout-btn");
 
-  // التحقق مما إذا كان المستخدم مسجّل دخول
+  if (!logInButton || !userIcon || !logoutButton) return;
+
   const userData = localStorage.getItem("user");
 
   if (userData) {
     const user = JSON.parse(userData);
 
-    // إخفاء زر تسجيل الدخول
+    // Hide the Sign-In button and show User Icon & Logout Button
     logInButton.style.display = "none";
-
-    // إظهار أيقونة المستخدم مع اسمه
     userIcon.style.display = "inline-block";
     userIcon.setAttribute("title", user.name);
+    logoutButton.style.display = "inline-block"; // Show logout button
+  } else {
+    logInButton.style.display = "inline-block";
+    userIcon.style.display = "none";
+    logoutButton.style.display = "none"; // Hide logout button
+  }
+
+  // Logout functionality
+  logoutButton.addEventListener("click", () => {
+    localStorage.removeItem("user"); // Remove user data
+    window.location.reload(); // Refresh page to update UI
+  });
+
+  // Simulate login success (You should replace this with actual login logic)
+  function handleLoginSuccess(user) {
+    localStorage.setItem("user", JSON.stringify(user)); // Save user data
+    window.location.href = "index.html"; // Redirect to home page
   }
 
   let theme = localStorage.getItem("theme");
@@ -86,6 +103,15 @@ window.changeToSun = function () {
   localStorage.setItem("theme", "light");
 };
 
+function userFun() {
+  let userDet = document.querySelector(".user-details");
+  let lgOuBt = document.querySelector(".logout-btn");
+
+  userDet.classList.toggle("inact");
+  userDet.classList.toggle("active");
+  lgOuBt.classList.toggle("inact");
+  lgOuBt.classList.toggle("active");
+}
 
 let goUp = document.querySelector(".go-up");
 
@@ -101,31 +127,36 @@ window.addEventListener("scroll", () => {
 // cddcd
 
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("form");
+  const form = document.getElementById("contact-form");
 
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
+  if (form) {
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault(); // Prevent normal form submission
 
-    const formData = {
-      name: form.name.value,
-      mail: form.mail.value,
-      message: form.message.value
-    };
+      const formData = {
+        name: document.getElementById("name").value,
+        mail: document.getElementById("email").value,
+        message: document.getElementById("message").value
+      };
 
-    try {
-      const response = await fetch("https://wddigitals-production.up.railway.app/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData)
-      });
+      try {
+        const response = await fetch("https://wddigitals-production.up.railway.app/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData)
+        });
 
-      const result = await response.json();
-      alert(result.message || "An error occurred.");
-    } catch (error) {
-      console.error("Error:", error);
-      alert("Failed to send message.");
-    }
-  });
+        const result = await response.json();
+        if (response.ok) {
+          alert("Message sent successfully!");
+          form.reset(); // Clear form fields after successful submission
+        } else {
+          alert("Error: " + result.error);
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        alert("Failed to send message.");
+      }
+    });
+  }
 });
