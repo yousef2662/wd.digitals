@@ -105,6 +105,10 @@ body{
   border: 2px solid var(--blue-color);
 }
 
+.navbar .navbar-toggler{
+  display: none;
+}
+
 /* landing */
 
 .landing{
@@ -199,7 +203,7 @@ body{
   transition: .3s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .projects .container .pro-card{
     width: 340px;
   }
@@ -232,12 +236,18 @@ body{
 }
 
 .Contact .container{
-  min-height: 100vh;
+  min-height: 10vh;
   position: relative;
   overflow: hidden;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+  .Contact .container{
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 767px) {
   .Contact .container{
     margin-top: 0rem;
   }
@@ -251,20 +261,11 @@ body{
   bottom: 0;
 }
 
-.left-half img{
-  height: 400px;
-  width: 450px;
-}
-
 .left-half .my-contact-info{
   margin-left: 8.5rem;
 }
 
 @media (max-width: 991px) {
-  .left-half img{
-    height: 330px;
-    width: 330px;
-  }
 
   .left-half .my-contact-info{
     margin-left: 4rem;
@@ -285,22 +286,9 @@ body{
     transform: translateX(-50%);
   }
 
-  .left-half img{
-    height: 300px;
-    width: 300px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
   .left-half .my-contact-info{
     margin-bottom: 2rem;
     align-self: center;
-  }
-
-  .right-half form input,
-  .right-half form textarea{
-    width: 17rem;
   }
 }
 
@@ -319,42 +307,25 @@ body{
   right: 0;
 }
 
-.right-half form{
-  height: 100%;
+.right-half img{
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
 }
 
 @media (max-width: 767px) {
-  .right-half form{
-    align-items: center;
-    height: unset;
-    margin-top: 5rem;
+  .right-half{
+    position: relative;
+    height: 310px;
+    bottom: 0;
+    margin-bottom: 100px;
   }
-}
 
-.right-half form input,
-.right-half form textarea{
-  padding: 10px 7px;
-  outline: none;
-  margin-bottom: 30px;
-  border-radius: 13px;
-  border: 2px solid var(--blue-color);
-}
-
-.right-half form button{
-  background-color: var(--blue-color);
-  color: white;
-  border: 2px solid transparent;
-  margin-inline-start: 16px;
-  width: 200px;
-  transition: .3s;
-  align-self: center;
-}
-
-.right-half form button:hover,
-.right-half form button:focus{
-  background-color: white;
-  color: var(--blue-color);
-  border: 2px solid var(--blue-color);
+  .right-half img{
+    height: 300px;
+  }
 }
 
 footer{
@@ -502,12 +473,12 @@ body.dark-mode  .navbar-toggler {
   width: 21px;
   height: 21px;
   color: var(--sun-color);
-  padding: 4.5px 4.5px;
+  padding: 4.5px 5px;
   border-radius: 50%;
   top: 2.7px;
   left: 5px;
   background-color: white;
-  transition-property: color, background-color, transform;
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: .5s;
   transform: scale(1);
@@ -517,13 +488,13 @@ body.dark-mode  .navbar-toggler {
   position: absolute;
   width: 23px;
   height: 23px;
-  padding: 3.5px 3.5px;
+  padding: 3.5px 4px;
   color: var(--moon-color);
   border-radius: 50%;
   top: 2.7px;
   right: 5px;
   background-color: white;
-  transition-property: color, background-color, transform;
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: .5s;
   transform: translate(5%, -50%), scale(1);
@@ -606,11 +577,8 @@ body.dark-mode  .navbar-toggler {
   top: 75px;
   right: 29.5px;
   border-radius: 12px;
-  transition: .3s ease;
-}
-
-.user-details.inact{
-  visibility: hidden;
+  transition: all .3s;
+  transform: scale(0);
 }
 
 .logout-btn {
@@ -622,28 +590,15 @@ body.dark-mode  .navbar-toggler {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  transition: 0.3s ease;
+  transition: all 0.3s;
   border: 2px solid transparent;
+  transform: scale(0);
 }
 
-@media (max-width: 767px) {
-  .user-details{
-    bottom: 0px;
-    top: unset;
-    width: 150px;
-  }
-
-  .logout-btn {
-    margin: 10px 0 10px 30px;
-  }
-}
-
-.logout-btn.inact{
-  visibility: hidden;
-}
-
-.logout-btn:hover {
+.logout-btn:hover,
+.logout-btn:focus {
   background-color: transparent;
   color: var(--logout-color);
   border: 2px solid var(--logout-color);
 }
+

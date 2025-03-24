@@ -55,10 +55,13 @@ window.changeToMoon = function () {
   let textOnLanding = document.querySelector(".text-on-landing");
   let goUp = document.querySelector(".go-up");
 
-  if (sun) sun.classList.add("inactiveS");
-  if (moon) moon.classList.remove("inactiveM");
-  if (changeMode) changeMode.classList.add("change-mode-to-d-back");
-  if (changeMode) changeMode.classList.remove("change-mode-to-l-back");
+  if (sun) sun.style.transform = "scale(.84)";
+  if (sun) moon.style.transform = "scale(1)";
+  if (sun) sun.style.backgroundColor = "transparent";
+  if (sun) moon.style.backgroundColor = "white";
+  if (sun) sun.style.color = "var(--inactive-color-forSun)";
+  if (sun) moon.style.color = "var(--moon-color)";
+  if (changeMode) changeMode.style.backgroundColor = "var(--moon-color)";
 
   if (navbar) navbar.classList.add("dark-mode");
   if (landing) landing.classList.add("dark-mode");
@@ -86,10 +89,13 @@ window.changeToSun = function () {
   let textOnLanding = document.querySelector(".text-on-landing");
   let goUp = document.querySelector(".go-up");
 
-  if (sun) sun.classList.remove("inactiveS");
-  if (moon) moon.classList.add("inactiveM");
-  if (changeMode) changeMode.classList.add("change-mode-to-l-back");
-  if (changeMode) changeMode.classList.remove("change-mode-to-d-back");
+  if (moon) moon.style.transform = "scale(.84)";
+  if (moon) sun.style.transform = "scale(1)";
+  if (moon) moon.style.backgroundColor = "transparent";
+  if (moon) sun.style.backgroundColor = "white";
+  if (moon) moon.style.color = "var(--inactive-color-forMoon)";
+  if (moon) sun.style.color = "var(--sun-color)";
+  if (changeMode) changeMode.style.backgroundColor = "var(--sun-color)";
 
   if (navbar) navbar.classList.remove("dark-mode");
   if (landing) landing.classList.remove("dark-mode");
@@ -107,10 +113,17 @@ function userFun() {
   let userDet = document.querySelector(".user-details");
   let lgOuBt = document.querySelector(".logout-btn");
 
-  userDet.classList.toggle("inact");
-  userDet.classList.toggle("active");
-  lgOuBt.classList.toggle("inact");
-  lgOuBt.classList.toggle("active");
+  if (userDet.classList.contains("inact")) {
+    userDet.classList.remove("inact");
+    userDet.style.transform = "scale(1)";
+    lgOuBt.classList.remove("inact");
+    lgOuBt.style.transform = "scale(1)";
+  } else {
+    userDet.classList.add("inact");
+    userDet.style.transform = "scale(0)";
+    lgOuBt.classList.add("inact");
+    lgOuBt.style.transform = "scale(0)";
+  }
 }
 
 let goUp = document.querySelector(".go-up");

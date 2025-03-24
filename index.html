@@ -28,7 +28,7 @@
       <a class="navbar-brand" href="#">
         <img src="images/logo-rmb.png" alt="">
       </a>
-      <div class="change-mode">
+      <div class="change-mode light">
         <i class="fa-solid fa-sun sun-mode" onclick="changeToMoon()"></i>
         <i class="fa-solid fa-moon moon-mode inactiveM" onclick="changeToSun()"></i>
       </div>
@@ -51,13 +51,13 @@
             <a class="nav-link" href="#contact">Contact Us</a>
           </li>
         </ul>
-        <a href="log-in.html" id="login-btn">
-          <button type="button" class="btn log-in">Log in</button>
-        </a>
-        <a href="#" id="user-icon" onclick="userFun();">
-          <i class="fa-solid fa-circle-user"></i>
-        </a>
       </div>
+      <a href="log-in.html" id="login-btn">
+        <button type="button" class="btn log-in">Log in</button>
+      </a>
+      <a href="#" id="user-icon" onclick="userFun();">
+        <i class="fa-solid fa-circle-user"></i>
+      </a>
     </div>
   </nav>
 
@@ -135,17 +135,9 @@
           <i class="fa-solid fa-envelope fs-4"></i>
           <p class="mb-0 ms-2 fs-4">wd.digitals1@gmail.com</p>
         </div>
-        <img src="images/contact.png" class="inactiv" alt="">
       </div>
       <div class="right-half">
-        <form id="contact-form" class="d-flex flex-column justify-content-center">
-          <input type="text" id="name" name="name" placeholder="Your name" required>
-          <input type="email" id="email" name="mail" placeholder="Your email" required>
-          <textarea id="message" name="message" placeholder="Your message" required></textarea>
-          <button type="submit" class="btn form-button">
-            <i class="fa-regular fa-paper-plane"></i> Send
-          </button>
-        </form>
+        <img src="images/contact.png" class="inactiv" alt="">
       </div>
     </div>
     <div class="social-media text-center">
