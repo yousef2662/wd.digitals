@@ -203,12 +203,6 @@ body{
   transition: .3s;
 }
 
-@media (max-width: 767px) {
-  .projects .container .pro-card{
-    width: 340px;
-  }
-}
-
 .projects .pro-card:hover,
 .projects .pro-card:focus{
   background-color: #115bc9;
@@ -228,6 +222,16 @@ body{
 
 .projects .honey-project{
   text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .projects .container .pro-card{
+    width: 340px;
+  }
+
+  .pro-card img{
+    height: 12rem;
+  }
 }
 
 /* contact us */
