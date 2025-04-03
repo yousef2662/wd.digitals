@@ -370,3 +370,41 @@ body.dark-mode{
 .inactive {
   display: none;
 }
+
+.not-yet-l{
+  position: absolute;
+  top: 110px;
+  left: 40px;
+}
+
+.not-yet-l h1{
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: rgb(194, 0, 0);
+  opacity: 0;
+}
+
+.not-yet-r{
+  position: absolute;
+  top: 110px;
+  right: 90px;
+}
+
+.not-yet-r h1{
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: rgb(194, 0, 0);
+  opacity: 0;
+}
+
+@keyframes appear {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
