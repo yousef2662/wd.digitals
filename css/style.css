@@ -612,7 +612,7 @@ footer h4{
 
 .landing.dark-mode .go-to-projects:hover,
 .landing.dark-mode .go-to-projects:focus{
-  background-color: var(--dark-mode-back-color);
+  background-color: black;
 }
 
 .landing.dark-mode{
