@@ -174,28 +174,13 @@ body {
 }
 
 .with-toggle-menu-right h1 {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .with-toggle-menu-right span {
   font-size: 15px;
 }
 
-.with-toggle-menu-right .icons-with-right {
-  margin-bottom: 15px;
-}
-
-.with-toggle-menu-right .icons-with-right a {
-  margin: 0 7px;
-  color: var(--blue-color);
-  background-color: var(--gray-color);
-  padding: 5px 7px;
-  border-radius: 10px;
-}
-
-.with-toggle-menu-right .icons-with-right .facebook {
-  padding: 5px 3px;
-}
 
 .with-toggle-menu-right input {
   margin: 20px 0px 10px;
@@ -243,28 +228,13 @@ body {
 }
 
 .with-toggle-menu-left h1 {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .with-toggle-menu-left span {
   font-size: 15px;
 }
 
-.with-toggle-menu-left .icons-with-left {
-  margin-bottom: 15px;
-}
-
-.with-toggle-menu-left .icons-with-left a {
-  margin: 0 7px;
-  color: var(--blue-color);
-  background-color: var(--gray-color);
-  padding: 5px 7px;
-  border-radius: 10px;
-}
-
-.with-toggle-menu-left .icons-with-left .facebook {
-  padding: 5px 3px;
-}
 
 .with-toggle-menu-left input {
   margin: 10px 0px 10px;
