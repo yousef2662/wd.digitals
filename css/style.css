@@ -170,11 +170,11 @@ body{
 
 /* landing */
 
-body:not(.dark-mode) .stars-div{
+body:not(.dark-mode) .stars-div {
   display: none;
 }
 
-body.dark-mode .stars-div{
+body.dark-mode .stars-div {
   width: 100%;
   height: 100vh;
   z-index: -1;
@@ -453,13 +453,6 @@ body.dark-mode .stars-div svg:nth-child(15){
   margin-left: 8.5rem;
 }
 
-@media (max-width: 991px) {
-
-  .left-half .my-contact-info{
-    margin-left: 4rem;
-  }
-}
-
 @media (max-width: 767px) {
 
   .contact .container{
@@ -474,7 +467,7 @@ body.dark-mode .stars-div svg:nth-child(15){
     transform: translateX(-50%);
   }
 
-  .left-half .my-contact-info{
+  .left-half a{
     margin-bottom: 2rem;
     align-self: center;
   }
@@ -486,6 +479,34 @@ body.dark-mode .stars-div svg:nth-child(15){
 
 .left-half .my-contact-info p{
   color: var(--blue-color);
+}
+
+.left-half img{
+  width: 300px;
+  border-radius: 17px;
+  margin-left: 40px;
+}
+
+@media (max-width: 991px) {
+
+  .left-half .my-contact-info{
+    margin-left: 4rem;
+  }
+
+  .left-half img{
+    margin-left: 0px;
+    width: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .left-half img{
+    margin-left: 0px;
+    width: 250px;
+    margin-bottom: 50px;
+    align-self: center;
+  }
 }
 
 .right-half{
@@ -502,6 +523,12 @@ body.dark-mode .stars-div svg:nth-child(15){
   bottom: 50%;
   transform: translate(-50%, 50%);
 }
+
+@media (max-width: 991px) {
+  .right-half img{
+    height: 350px;
+  }
+} 
 
 @media (max-width: 767px) {
   .right-half{

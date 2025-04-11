@@ -1,4 +1,32 @@
+// Apply dark mode early if saved in localStorage
+let savedTheme = localStorage.getItem("theme");
+if (savedTheme === "dark") {
+  document.body.classList.add("dark-mode");
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  const changeModeDiv = document.querySelector(".change-mode");
+
+  // Apply correct mode when page fully loads
+  let currentTheme = localStorage.getItem("theme");
+  if (currentTheme === "dark") {
+    window.changeToMoon();
+  } else {
+    window.changeToSun();
+  }
+
+  // Handle toggle on click
+  if (changeModeDiv) {
+    changeModeDiv.addEventListener("click", () => {
+      let currentTheme = localStorage.getItem("theme");
+      if (currentTheme === "dark") {
+        window.changeToSun();
+      } else {
+        window.changeToMoon();
+      }
+    });
+  }
+
   const logInButton = document.querySelector("#login-btn");
   const userIcon = document.querySelector("#user-icon");
   const logoutButton = document.querySelector("#logout-btn");
@@ -33,12 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "index.html"; // Redirect to home page
   }
 
-  let theme = localStorage.getItem("theme");
-  if (theme === "dark") {
-    window.changeToMoon();
-  } else {
-    window.changeToSun();
-  }
+
 });
 
 window.changeToMoon = function () {
